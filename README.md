@@ -203,3 +203,4 @@ Proprietary. All rights reserved.
 
 ---
 **⚠️ Legal Notice:** This platform implements DPDP Act 2023 requirements to the best of engineering ability. However, the final compliance determination must be made by qualified legal counsel. Sections flagged with `# DPDP_LEGAL_REVIEW` in source code indicate areas where the specific wording from DPDP Rules / Schedule I should be verified against the latest gazette notification.
+****
