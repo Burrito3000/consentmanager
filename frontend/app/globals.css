@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 98%;
+    --foreground: 42 5% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 42 5% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 42 5% 14%;
+    --primary: 217 78% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 15% 94%;
+    --secondary-foreground: 42 5% 14%;
+    --muted: 42 12% 92%;
+    --muted-foreground: 43 3% 42%;
+    --accent: 42 15% 94%;
+    --accent-foreground: 42 5% 14%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 50% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 42 12% 86%;
+    --input: 42 12% 86%;
+    --ring: 217 78% 54%;
+    --radius: 0.625rem;
+    --sidebar: 40 20% 96%;
+    --sidebar-foreground: 42 5% 14%;
+    --sidebar-border: 42 12% 86%;
+    --chart-1: 217 78% 54%;
+    --chart-2: 142 50% 42%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 325 60% 50%;
+    --chart-5: 270 60% 50%;
+  }
+
+  .dark {
+    --background: 40 7% 9%;
+    --foreground: 42 15% 89%;
+    --card: 40 7% 11%;
+    --card-foreground: 42 15% 89%;
+    --popover: 40 7% 11%;
+    --popover-foreground: 42 15% 89%;
+    --primary: 217 65% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 3% 18%;
+    --secondary-foreground: 42 15% 89%;
+    --muted: 42 3% 18%;
+    --muted-foreground: 42 3% 55%;
+    --accent: 42 3% 18%;
+    --accent-foreground: 42 15% 89%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 50% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 80% 40%;
+    --warning-foreground: 0 0% 100%;
+    --border: 42 3% 22%;
+    --input: 42 3% 22%;
+    --ring: 217 65% 50%;
+    --sidebar: 40 7% 10%;
+    --sidebar-foreground: 42 15% 89%;
+    --sidebar-border: 42 3% 22%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .hairline {
+    border-width: 0.5px;
+  }
+  .card-hover {
+    @apply transition-all duration-150;
+  }
+  .card-hover:hover {
+    @apply shadow-sm;
+  }
+}
