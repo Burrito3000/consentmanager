@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "next": "^15.0.0"
+  },
+  "scripts": {
+    "build": "cd frontend && npx next build",
+    "install": "cd frontend && npm install"
+  }
+}
