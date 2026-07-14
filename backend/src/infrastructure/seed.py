@@ -70,6 +70,7 @@ def seed() -> None:
             uow.purposes.save(purpose)
             purposes.append(purpose)
             print(f"  Created purpose: {purpose.name}")
+        uow.flush()
 
         # 3. Create notices for each purpose (English + Hindi + Tamil)
         for purpose in purposes:
