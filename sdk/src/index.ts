@@ -52,7 +52,7 @@ class ConsentManager {
       config: {
         tenantKey: config.tenantKey || "",
         principalRef: config.principalRef || "",
-        apiBase: config.apiBase || "http://localhost:8000/api/v1",
+        apiBase: config.apiBase || "",  // Must be set via data-api-base attribute
         locale: config.locale || "en",
         position: config.position || "bottom",
         theme: config.theme || "light",

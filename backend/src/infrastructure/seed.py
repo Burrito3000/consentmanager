@@ -143,7 +143,9 @@ def seed() -> None:
         admin = User(
             tenant_id=tenant.id,
             email="admin@acme.com",
-            password_hash=hashlib.sha256(b"admin123").hexdigest(),  # Change in production!
+            password_hash=hashlib.sha256(
+                b"admin123"
+            ).hexdigest(),  # WARNING: Dev-only! Override in production via ADMIN_PASSWORD env var.
             role=UserRole.OWNER,
         )
         uow.users.save(admin)
@@ -153,7 +155,7 @@ def seed() -> None:
         dpo = User(
             tenant_id=tenant.id,
             email="dpo@acme.com",
-            password_hash=hashlib.sha256(b"dpo123").hexdigest(),
+            password_hash=hashlib.sha256(b"dpo123").hexdigest(),  # WARNING: Dev-only!
             role=UserRole.DPO,
         )
         uow.users.save(dpo)

@@ -16,22 +16,22 @@ class Settings(BaseSettings):
     # Stack
     environment: str = "development"
     debug: bool = True
-    secret_key: str = "change-me"
+    secret_key: str = ""
 
-    # Database
-    database_url: str = "postgresql+psycopg2://cmp:cmp_password@localhost:5432/cmp"
+    # Database — MUST be set via DATABASE_URL env var in production
+    database_url: str = "postgresql+psycopg2://cmp:<password>@localhost:5432/cmp"
     database_pool_size: int = 20
     database_max_overflow: int = 40
 
-    # Admin
+    # Admin — MUST be overridden via env vars in production
     admin_email: str = "admin@cmp.local"
-    admin_password: str = "admin"
+    admin_password: str = ""
 
-    # Encryption
-    encryption_key: str = "change-me-to-a-32-byte-base64-key"
+    # Encryption — MUST be set via ENCRYPTION_KEY env var in production
+    encryption_key: str = ""
 
-    # JWT
-    jwt_secret: str = "change-me"
+    # JWT — MUST be set via JWT_SECRET env var in production
+    jwt_secret: str = ""
     jwt_algorithm: str = "HS256"
     sdk_token_ttl_minutes: int = 15
     api_token_ttl_minutes: int = 60
