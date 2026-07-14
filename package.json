@@ -1,10 +1,9 @@
 {
   "private": true,
-  "dependencies": {
-    "next": "^15.0.0"
-  },
+  "workspaces": ["frontend", "sdk"],
   "scripts": {
-    "build": "cd frontend && npx next build",
-    "install": "cd frontend && npm install"
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "lint": "npm run lint --workspace=frontend"
   }
 }
