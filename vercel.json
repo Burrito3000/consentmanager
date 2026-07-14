@@ -1,10 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "cd frontend && npx next build",
-  "outputDirectory": "frontend/.next",
-  "installCommand": "cd frontend && npm install",
-  "ignoreCommand": "npx turbo-ignore",
+  "rootDirectory": "frontend",
+  "buildCommand": "npx next build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
   "git": {
     "deploymentEnabled": {
       "main": true
