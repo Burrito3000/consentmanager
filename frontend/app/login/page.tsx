@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "https://consentmanager.netstartagency.com/").replace(/\/+$/, "");
 
 export default function LoginPage() {
   const router = useRouter();

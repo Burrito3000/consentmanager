@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
       ],
     },
   ],
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "https://consentmanager.netstartagency.com/api/v1/:path*",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

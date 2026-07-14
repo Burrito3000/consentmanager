@@ -252,7 +252,7 @@ def get_dashboard(admin: str = Depends(verify_admin_token)):
     container = ServiceContainer()
     notice_svc = container.notice_service()
     rights_svc = container.rights_service()
-    languages = notice_svc.list_supported_languages()
+    languages = list(notice_svc.list_supported_languages().keys())
     tenant_id = _get_default_tenant()
 
     total_consents = 0
@@ -317,7 +317,7 @@ def get_dashboard(admin: str = Depends(verify_admin_token)):
 def get_purposes(admin: str = Depends(verify_admin_token)):
     container = ServiceContainer()
     notice_svc = container.notice_service()
-    languages = notice_svc.list_supported_languages()
+    languages = list(notice_svc.list_supported_languages().keys())
     tenant_id = _get_default_tenant()
     purposes_list = []
     total_purposes = 0
